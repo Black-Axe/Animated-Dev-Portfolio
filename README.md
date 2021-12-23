@@ -2,6 +2,8 @@
 <h2>Animated Software Developer Portfolio Template</h2>
 <h5>Includes blog and contact form</h5>
 
+<p>If any configuration or help is needed, feel free to contact me
+I hope to put together a more comprehensive documentation later</p>
 <img src="/RepoImage/cov.png" />
 <img src="/RepoImage/exampletwo.png" />
 <img src="/RepoImage/projects.png" />
