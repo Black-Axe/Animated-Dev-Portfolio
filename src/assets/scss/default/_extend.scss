@@ -1,0 +1,395 @@
+/*=====================
+Common Css 
+=======================*/
+
+
+// Text Color
+%themecolor {
+    color: $theme-color;
+}
+
+
+%textBlack {
+    color: #000000;
+}
+
+%textBlack22 {
+    color: #222222;
+}
+
+.textBlack {
+    color: #000000;
+}
+
+%bodyColor {
+    color: #535353;
+}
+
+.bodyColor {
+    color: #535353;
+}
+
+%textwhite {
+    color: #ffffff;
+}
+
+%color-1 {
+    color : #8956e2;
+}
+
+%color-2 {
+    color : #11ccd3;
+}
+
+%color-3 {
+    color : #f4769a;
+}
+
+%color-4 {
+    color : #2f21b3;
+}
+// Color
+.color-1 {
+    color : #8956e2;
+}
+
+.color-2 {
+    color : #11ccd3;
+}
+
+.color-3 {
+    color : #f4769a;
+}
+
+.color-4 {
+    color : #2f21b3;
+}
+
+// Bg Color
+%bgthemecolor {
+    background: $theme-color;
+}
+
+%bgwhitecolor {
+    background: $white;
+}
+
+%bgBlack {
+    background: #000000;
+}
+
+
+%bgColor-1 {
+    background : #8956e2;
+}
+
+%bgColor-2 {
+    background : #11ccd3;
+}
+
+.bgcolor-4 {
+    background : #2f21b3;
+}
+
+// Style Css
+%liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.liststyle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+%transition {
+    -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+
+%verticalCenter {
+    @extend %posabsolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+    z-index: 2;
+}
+%positionFull {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+%width100 {
+    width: 100%;
+}
+
+%height100 {
+    height: 100%;
+}
+
+
+%overflowHidden {
+    overflow: hidden;
+}
+
+%cursorPointer {
+    cursor: pointer;
+}
+
+%font {
+    font-family: $body-font;
+}
+
+%headingFont {
+    font-family: $heading-font;
+}
+
+// Font Weight
+%fontWeight900 {
+    font-weight: 900;
+}
+
+%fontWeight800 {
+    font-weight: 800;
+}
+
+%fontWeight700 {
+    font-weight: 700;
+}
+
+%fontWeight600 {
+    font-weight: 600;
+}
+
+%fontWeight500 {
+    font-weight: 500;
+}
+
+%fontWeight400 {
+    font-weight: 400;
+}
+
+%fontWeight300 {
+    font-weight: 300;
+}
+
+.fontWeight900 {
+    font-weight: 900 !important;
+}
+
+.fontWeight800 {
+    font-weight: 800 !important;
+}
+
+.fontWeight700 {
+    font-weight: 700 !important;
+}
+
+.fontWeight600 {
+    font-weight: 600 !important;
+}
+
+.fontWeight500 {
+    font-weight: 500 !important;
+}
+
+.fontWeight400 {
+    font-weight: 400 !important;
+}
+
+.fontWeight300 {
+    font-weight: 300 !important;
+}
+
+
+// Text Align
+
+%textLeft {
+    text-align: left;
+}
+
+%textRight {
+    text-align: right;
+}
+
+%textCenter {
+    text-align: center;
+}
+
+// Flexbox Extend
+
+%flexbox {
+    @include flexbox;
+}
+
+%justify-center {
+    @include justify-content(center);
+}
+
+%justify-around {
+    @include justify-content(space-around);
+}
+
+%justify-between {
+    @include justify-content(space-between);
+}
+
+%justify-start {
+    @include justify-content(flex-start);
+}
+
+%justify-end {
+    @include justify-content(flex-end);
+}
+
+%align-start {
+    @include align-items(flex-start);
+}
+
+%align-end {
+    @include align-items(flex-end);
+}
+
+%align-center {
+    @include align-items(center);
+}
+
+%align-stretch {
+    @include align-items(stretch);
+}
+
+%align-baseline {
+    @include align-items(baseline);
+}
+
+%flex-wrap {
+    @include flex-wrap(wrap);
+}
+
+%flex-nowrap {
+    @include flex-wrap(nowrap);
+}
+
+%flex-column {
+    @include flex-direction(column);
+}
+
+%flex-column-reverse {
+    @include flex-direction(column-reverse);
+}
+
+%flex-row {
+    @include flex-direction(row);
+}
+
+%flex-row-reverse {
+    @include flex-direction(row-reverse);
+}
+
+%absFlexCenter {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+%horizontalFlexCenter {
+    @include flexbox;
+    @include justify-content(center);
+}
+
+%verticalFlexCenter {
+    @include flexbox;
+    @include align-items(center);
+}
+
+
+// Bootstrap
+%posabsolute {
+    position: absolute;
+}
+
+%posrelative {
+    position: relative;
+}
+
+%inlineBlock {
+    display: inline-block;
+}
+
+%block {
+    display: block;
+}
+
+
+%textUpper {
+    text-transform: uppercase;
+}
+
+.textUpper {
+    text-transform: uppercase;
+}
+
+%textCap {
+    text-transform: capitalize;
+}
+
+.textCap {
+    text-transform: capitalize;
+}
+
+
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+// Font Family
+
+
+%bgImagePosition {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+%gradientDefault {
+    background: linear-gradient(to right, $theme-color 50%, #00a194 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.text-default-gradient {
+    @extend %gradientDefault;
+}
+
+.theme-gradient {
+    background: linear-gradient(-259deg, $theme-color 0, #00a194 100%);
+}
+
+.theme-gradient {
+    background: linear-gradient(-259deg, $theme-color 0, #00a194 100%);
+}
+
+
+
+
+
+%theme-gradient {
+    background: linear-gradient(-259deg, $theme-color 0, #00a194 100%);
+}
+
+
+
+
+
+
+
+
+
+
+

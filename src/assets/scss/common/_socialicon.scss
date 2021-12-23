@@ -1,0 +1,117 @@
+/* Social icon Styles  */
+
+ul {
+    &.social-share {
+        padding: 0;
+        margin: 0;
+        margin: -6px;
+        li {
+            margin: 6px;
+            a {
+                width: 40px;
+                display: inline-block;
+                height: 40px;
+                border: 2px solid rgba(198, 201, 216, 0.75);
+                line-height: 35px;
+                color: rgba(198, 201, 216, 0.75);
+                border-radius: 100%;
+                text-align: center;
+                font-size: 14px;
+                @extend %transition;
+            }
+            svg {
+                color: $theme-color !important;
+            }
+            &:hover {
+                a {
+                    background: $theme-color;
+                    border-color: $theme-color;
+                    color: #ffffff;
+                    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+                    transform: translateY(-3px);
+                }
+                svg {
+                    color: #ffffff !important;
+                }
+            }
+        }
+        &.color-theme{
+            li {
+                a {
+                    border-color: $theme-color;
+                    color: $theme-color;
+                    &:hover {
+                        background: $theme-color;
+                        border-color: $theme-color;
+                        color: #ffffff;
+                    }
+                }
+
+            }
+        }
+        &.rn-lg-size {
+            margin-top: 0 !important;
+            li {
+                a {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 44px;
+                    font-size: 16px;
+                }
+            }
+        }
+        &.social-style--2 {
+            li{
+                a {
+                    border: 0 none;
+                    width: 30px;
+                    height: auto;
+                    text-align: left;
+                    line-height: inherit;
+                    font-size: 16px;
+                }
+                &:hover{
+                    a {
+                        background: transparent;
+                        box-shadow: none;
+
+                    }
+                }
+            }
+            &.color-theme{
+                li {
+                    a {
+                        color: $theme-color;
+                        &:hover {
+                            color: currentColor;
+                        }
+                    }
+
+                }
+            }
+            &.color-black{
+                li {
+                    a {
+                        color: #1d1d24;
+                        opacity: 0.8;
+                        &:hover {
+                            color: $theme-color;
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+

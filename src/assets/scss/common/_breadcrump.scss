@@ -1,0 +1,117 @@
+/*====================
+    Breadcrump Area 
+======================*/
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1260px;
+    }
+}
+
+.breadcrumb-inner {
+    text-align: center;
+    h2{
+        &.title{
+            background: #f81f01;
+            background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    ul{
+        &.page-list {
+            @extend %liststyle;
+            li{
+                display: inline-block;
+                color: #fff;
+                a{
+                    color: #fff;
+                }
+                &.breadcrumb-item{
+                    &.active{
+                        color: #f10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.breadcrupm-style--2{
+    h2 {
+        &.title {
+            text-transform: uppercase;
+            font-size: 72px;
+            @media #{$sm-layout} {
+                font-size: 40px;
+                line-height: 59px;
+            }
+        }
+    }
+    span {
+        font-size: 22px;
+        color: #c6c9d8;
+    }
+}
+
+.rn-page-title {
+    h2 { 
+        &.title {
+            font-size: 72px;
+            @media #{$lg-layout} {
+                font-size: 56px;
+            }
+            @media #{$md-layout} {
+                font-size: 50px;
+            }
+            @media #{$sm-layout} {
+                font-size: 40px;
+                line-height: 59px;
+            }
+        }
+    }
+    p {
+        font-size: 22px;
+        line-height: 27px;
+        color: #c6c9d8;
+    }
+}
+
+
+
+
+
+.backto-top {
+    > div {
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        line-height: 49px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        text-align: center;
+        overflow: hidden;
+        z-index: 999 !important;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    }
+    svg {
+        font-size: 14px !important;
+        color: #222222;
+        width: 27px;
+        height: 27px;
+    }
+}
+
+.scrolldown{
+    svg{
+        color: white;
+        width: 2%;
+        height: 3%;
+    }
+}
+
+
+
+
+

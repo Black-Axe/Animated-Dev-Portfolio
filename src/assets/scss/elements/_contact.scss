@@ -1,0 +1,155 @@
+// Contact Styles 
+
+.contact-form--1 {
+    label {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    input,
+    textarea {
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        border: 2px solid rgba(146, 29, 29, 0.1);
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        height: 50px;
+        line-height: 46px;
+        margin-bottom: 20px;
+        outline: none;
+        color: #1f1f25;
+        font-size: large;
+        letter-spacing: 0.1px;
+        font-weight: bold;
+        &:focus {
+            border-color: $theme-color;
+        }
+    }
+    textarea {
+        height: 120px;
+    }
+}
+
+
+/*==========================
+    Contact Address 
+============================*/
+
+.rn-address {
+    margin-top: 30px;
+    border: 1px solid #ebebeb;
+    padding: 40px;
+    border-radius: 10px;
+    padding-top: 54px;
+    background: #fff;
+    padding-bottom: 50px;
+    .icon {
+        
+        border: 1px solid #ebebeb;
+        width: 78px;
+        height: 78px;
+        color: #9c0000;
+        line-height: 73px;
+        text-align: center;
+        border-radius: 100%;
+        background: #3d1111;
+        font-size: 28px;
+        position: absolute;
+        top: -13px;
+        left: 12%;
+        @extend %transition;
+    }
+    .inner {
+        h4 {
+            &.title {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 0;
+            color: rgba(29, 29, 36, 0.75);
+            @media #{$lg-layout} {
+                font-size: 16px;
+            }
+            @media #{$md-layout} {
+                font-size: 16px;
+            }
+            @media #{$sm-layout} {
+                font-size: 16px;
+            }
+            br {
+                
+                @media #{$lg-layout} {
+                    display: none;
+                }
+
+                @media #{$md-layout} {
+                    display: none;
+                }
+
+                @media #{$sm-layout} {
+                    display: none;
+                }
+            }
+            a {
+                color: rgba(29, 29, 36, 0.75);
+                @extend %transition;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+    &:hover {
+        .icon {
+            background: $theme-color;
+            border-color: $theme-color;
+            color: #fff;
+        }
+    }
+}
+
+input,
+textarea {
+    @extend %transition;
+}
+
+.blog-comment-form .inner .rnform-group input:focus ,
+.blog-comment-form .inner .rnform-group textarea:focus {
+    border-color: $theme-color ;
+}
+
+
+
+
+
+
+
+
+
+
+
+input[type='text'], #contactTextArea{
+    color: red;
+    font-weight: bold;
+    font-size: large;
+    background-color: transparent;
+
+ 
+}
+
+#contactButton{
+    color:white;
+    background-color: red;
+}
+
+.paccy{
+    margin-left:35%;
+    margin-right: 80%;
+}
+
+

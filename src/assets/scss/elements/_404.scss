@@ -1,0 +1,55 @@
+/*----------------------
+    Error Area  
+------------------------*/
+
+.error-page-inner{
+    
+      
+
+    
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
+    height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    min-height: 700px;
+    .inner {
+        text-align: center;
+        h1{
+            &.title {
+                font-size: 180px;
+                line-height: 1;
+                margin-bottom: 0;
+                @media #{$sm-layout} {
+                    font-size: 107px;
+                }
+            }
+        }
+        .sub-title {
+            margin-bottom: 0;
+            font-weight: 1200;
+            font-size: 120px;
+            color: #e20101;
+            @media #{$sm-layout} {
+                font-size: 40px;
+            }
+        }
+        span {
+            font-size: 26px;
+            margin-top: 10px;
+            color: #ff0000;;
+            font-weight: 1300;
+            display: block;
+            margin-bottom: 28px;
+        }
+    }
+
+
+
+
+
+   
+}

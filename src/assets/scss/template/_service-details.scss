@@ -1,0 +1,85 @@
+/*--------------------------
+    Service Details Styles 
+-----------------------------*/
+
+.service-details-inner {
+    .page-title {
+        padding-left: 105px;
+        h2 {
+            &.title {
+                font-size: 40px;
+                line-height: 51px;
+                margin-bottom: 14px;
+            }
+        }
+        p {
+            font-size: 24px;
+            line-height: 30px;
+            color: rgba(29, 29, 36, 0.75);
+            margin-bottom: 0;
+        }
+    }
+    .sercice-details-content {
+        .thumb {
+            .video-popup {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                border: 0 none;
+            }
+        }
+        .details {
+            p {
+                color: rgba(29, 29, 36, 0.75);
+                font-size: 18px;
+                line-height: 30px;
+                margin-bottom: 0;
+                & + p {
+                    margin-top: 30px;
+                }
+            }
+            h4 {
+                &.title {
+                    font-size: 36px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    margin-top: 40px;
+                    margin-bottom: 27px;
+                    @media #{$sm-layout} {
+                        font-size: 26px;
+                        line-height: 38px;
+                        margin-top: 26px;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+            ul {
+                &.liststyle {
+                    li {
+                        font-size: 18px;
+                        line-height: 30px;
+                        color: rgba(29, 29, 36, 0.75);
+                        position: relative;
+                        padding-left: 30px;
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            border-radius: 100%;
+                            background: rgba(29, 29, 36, 0.75);
+                            left: 0;
+                            top: 10px;
+                        }
+                        & + li {
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}

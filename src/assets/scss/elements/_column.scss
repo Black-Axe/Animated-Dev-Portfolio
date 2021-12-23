@@ -1,0 +1,34 @@
+/*-------------------
+    Column Area  
+---------------------*/
+
+.single-column {
+    h4 {
+        &.tilte {
+            margin-bottom: 6px;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    &.custom-color {
+        background: $theme-color;
+        padding: 37px 29px;
+        h4 {
+            &.tilte {
+                color: #ffffff;
+            }
+        }
+        p {
+            color: #ffffff;
+        }
+        &.custom-color--1 {
+            background: #001c43;
+        }
+        &.custom-color--2 {
+            background: #c93ec7;
+        }
+    }
+}
+

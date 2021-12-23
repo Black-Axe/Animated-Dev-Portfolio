@@ -1,0 +1,171 @@
+/*-----------------------------
+    Portfolio Details Styles 
+-------------------------------*/
+
+
+.portfolio-thumb-inner {
+    .thumb {
+        position: relative;
+        .video-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 0 none;
+            width: 110px;
+            height: 110px;
+            background: $theme-color;
+            margin-left: -35px;
+            margin-top: -35px;
+
+            @media #{$sm-layout} {
+                width: 70px;
+                height: 70px;
+            }
+            
+            &::before {
+                border-left: 15px solid #ffffff;
+            }
+            span {
+                font-size: 18px;
+                line-height: 28px;
+                display: inline-block;
+                color: #292642;
+                font-weight: 500;
+            }
+            &:hover {
+                transform: scale3d(1.15, 1.15, 1.15);
+            }
+        }
+    }
+}
+
+.portfolio-details {
+    .inner {
+        padding: 0 210px;
+        @media #{$lg-layout} {
+            padding: 0 100px;
+        }
+        @media #{$md-layout} {
+            padding: 0 50px;
+        }
+        @media #{$sm-layout} {
+            padding: 0 30px;
+        }
+        @media #{$large-mobile} {
+            padding: 0px;
+        }
+        h2 {
+            display: block;
+            margin-bottom: 0;
+            padding-bottom: 43px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            color: rgba(29, 29, 36, 0.75);
+            margin-bottom: 30px;
+            
+            @media #{$lg-layout} {
+                margin-bottom: 22px;
+            }
+
+            @media #{$md-layout} {
+                margin-bottom: 22px;
+            }
+
+            @media #{$sm-layout} {
+                margin-bottom: 22px;
+            }
+            &.subtitle {
+                color: $heading-color;
+                font-size: 23px;
+                line-height: 44px;
+                margin-top: 28px;
+
+                @media #{$lg-layout} {
+                    font-size: 20px;
+                    line-height: 38px;
+                    margin-top: 24px;
+                }
+                @media #{$md-layout} {
+                    font-size: 18px;
+                    line-height: 38px;
+                    margin-top: 24px;
+                }
+                @media #{$sm-layout} {
+                    font-size: 18px;
+                    line-height: 38px;
+                    margin-top: 24px;
+                }
+            }
+        }
+        .portfolio-view-list {
+            margin: 0 -40px;
+            .port-view {
+                margin: 0 40px;
+                span {
+                    font-size: 16px;
+                    color: rgba(29, 29, 36, 0.75);
+                    display: block;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                }
+                h4 {
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+
+// Related Project 
+.related-work{
+    .thumb{
+        a{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .inner {
+        padding-top: 25px;
+        h4 {
+            font-size: 24px;
+            line-height: 39px;
+            margin-bottom: 7px;
+            a {
+                color: $heading-color;
+                @extend %transition;
+            }
+            &:hover{
+                a{
+                    color: $theme-color;
+                }
+            }
+        }
+        span {
+            &.category {
+                color: rgba(29, 29, 36, 0.75);
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.extraSherief {
+    padding: 5%;
+}
+
+.w-200{
+    max-width: 200%;
+}
+@media only screen and (max-width: 767px){
+    .w-200{
+        max-width: 100%;
+    }
+}

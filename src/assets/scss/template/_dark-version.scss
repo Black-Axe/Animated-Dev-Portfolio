@@ -1,0 +1,303 @@
+/*--------------------------
+    Color Darker Version  
+----------------------------*/
+
+$bblue: '#58E2FF';
+
+
+.active-dark {
+    background: #101010;
+    [data-overlay="6"]:before,
+    [data-black-overlay="6"]:before,
+    [data-white-overlay="6"]:before {
+        display: none;
+    }
+    [data-overlay]:before,
+    [data-black-overlay]:before,
+    [data-white-overlay]:before {
+        display: none;
+    }
+    .service-white .service__style--1 .content h4.title{
+        color: #ffffff;
+    }
+
+
+    
+    .bg_image--3,
+    .bg_image--1 ,
+    .rn-testimonial-content .inner p::before,
+    .rn-testimonial-content .inner p::after ,
+    .footer-right  {
+        
+        background-image: inherit !important;
+    }
+    .bg_color--1 ,
+    .brand-separation {
+
+      
+      background: #191919;
+    }
+    
+
+    .bg_color--5,
+    .footer-right {
+        background: #101010;
+    }
+    ul.brand-style-2 img {
+        filter: invert(1);
+    }
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: #ffffff;
+    }
+    a.btn-transparent {
+        color: #ffffff; 
+    }
+    .section-title p ,
+    .about-us-list p ,
+    .about-inner .section-title p.description,
+    .service.service__style--2 .content p ,
+    .counterup_style--1 p.description ,
+    .rn-testimonial-content .author-info h6 ,
+    .slide.slider-style-3 .inner>span ,
+    .single-tab-content ul li a ,
+    .single-tab-content ul li {
+       color: rgb(255, 255, 255);
+    }
+
+    /////////////////for the main text on the header of the 
+    //front 
+    //page
+    @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .slide.slider-style-3 .inner h1.title span{
+            font-size: 80%;
+        }
+      }
+    .slide.slider-style-3 .inner h1.title span{
+        color: bblue;
+        //font-size: large;
+    }
+
+    ul.tab-style--1 li::before {
+        background: rgba(198, 201, 216, 0.75);
+    }
+
+    ul.tab-style--1 li.react-tabs__tab--selected {
+        color: $theme-color;
+    }
+    ul.tab-style--1 li.react-tabs__tab--selected::before {
+        background: currentColor;
+    }
+
+    .service.service__style--2:hover .content h3.title,
+    .service.service__style--2:hover .content p,
+    .rn-testimonial-content .author-info h6 span ,
+    .rn-testimonial-content .inner p ,
+    .section-title p a ,
+    .slide.slider-style-3 .inner h1.title ,
+    .color-black .mainmenunav ul.mainmenu>li>a ,
+    ul.social-share.social-style--2.color-black li a ,
+    .header-area.color-black a.rn-btn ,
+    ul.tab-style--1 li {
+        color: #ffffff; 
+    }
+    .portfolio-sacousel-inner .slick-dots li button::after,
+    .rn-slick-dot .slick-dots li button::after {
+        background: #ffffff;
+        box-shadow: inset 0 0 0 5px #ffffff;
+    }
+    .creative-service-wrapper .row.creative-service .service.service__style--2 {
+        background: #191919;
+    }
+    .contact-form--1 input, .contact-form--1 textarea ,
+    .header-area.color-black a.rn-btn {
+        border: 2px solid $theme-color;
+    }
+    .header-area.color-black a.rn-btn:hover{
+        border-color: $theme-color;
+    }
+    .header-area.header--fixed.sticky {
+        background: black;
+        //border-bottom:1px solid $theme-color;
+    }
+    .header-area.header--fixed.sticky .header-wrapper a.rn-btn {
+        color: #ffffff;
+        border-color: $theme-color;
+    }
+    .header-area.header--fixed.sticky .header-wrapper a.rn-btn:hover{
+        color: #ffffff;
+        border-color: $theme-color;
+    }
+    .backto-top>div {
+        background-color: #000;
+    }
+    .backto-top svg {
+        color: #fff;
+    }
+    .contact-form--1 input,
+    .contact-form--1 textarea {
+        color: rgba(198, 201, 216, 0.75)
+    }
+
+    .personal-portfolio-slider::before {
+        display: none;
+    }
+
+    @media #{$md-layout} {
+        .header-style-two .humberger-menu span.text-white {
+            color: #c6c9d8 !important;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu {
+            background: #101010;
+        }
+        .header-area .header-wrapper.menu-open .close-menu span {
+            color: #c6c9d8 !important;
+        }
+        .header-area.header--fixed.sticky .humberger-menu span.text-white {
+            color: #c6c9d8 !important;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu li a  {
+            color: #ffffff;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu li.has-droupdown>a::after {
+            border-color: #ffffff transparent transparent transparent;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu li.has-droupdown>a.open::after {
+            border-color: transparent transparent $theme-color transparent
+        }
+    }
+    @media #{$sm-layout} {
+        .header-style-two .humberger-menu span.text-white {
+            color: #c6c9d8 !important;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu {
+            background: #101010;
+        }
+        .header-area .header-wrapper.menu-open .close-menu span {
+            color: #c6c9d8 !important;
+        }
+        .header-area.header--fixed.sticky .humberger-menu span.text-white {
+            color: #c6c9d8 !important;
+        }
+        .service.service__style--2 .content p {
+            color: #ffffff;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu li a  {
+            color: #ffffff;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu li.has-droupdown>a::after {
+            border-color: #ffffff transparent transparent transparent;
+        }
+        .header-area .header-wrapper .mainmenunav ul.mainmenu li.has-droupdown>a.open::after {
+            border-color: transparent transparent $theme-color transparent
+        }
+    }
+
+    
+    .darkcontent {
+        background: #191919;
+        margin-top:  8%;
+    }
+
+    .elsowinyservices {
+        background: #191919;
+    }
+    .service.service__style--2 .iconelsowiny{
+        color: black!important;
+    }
+
+
+
+    .lvl{
+        color: $theme-color;
+    }
+    .servicesmain .service.service__style--2{
+        padding-bottom: 8%;
+    }
+}
+
+
+.elsowinyBlog{
+    font-size: 16px;
+    padding-bottom: 70px;
+}
+
+.form-error{
+    color: #f9004d;
+}
+
+button:disabled{
+    background-color: grey !important;
+    cursor: not-allowed !important;
+    color: lightgray !important;
+    border: 2px solid #878787 !important;
+}
+
+input:disabled{
+    background-color: grey !important;
+    cursor: not-allowed !important;
+    color: lightgray !important;
+    border: 2px solid #878787 !important;
+}
+
+.frame-layout__particles-form{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.particlesRelative{
+    position: relative !important;
+}
+
+.lvlSkills{
+    color: $theme-color !important;
+    font-weight: bold;
+}
+.lvlSkillsTwo{
+    color: wheat !important;
+    font-weight: bold;
+}
+.blueify{
+    color: $theme-color !important;
+}
+
+*{
+    
+    cursor: url('https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amn/frame_0_delay-0.1s.gif'), auto;
+    animation: cursor 400ms infinite;
+}
+
+
+$frame1 : "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amnog/frame_0_delay-0.1s.gif";
+$frame2 : "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amnog/frame_1_delay-0.1s.gif";
+$frame3 : "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amnog/frame_2_delay-0.1s.gif";
+$frame4 : "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amnog/frame_3_delay-0.1s.gif";
+$frame5 : "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amnog/frame_4_delay-0.1s.gif";
+$frame6 : "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amnog/frame_5_delay-0.1s.gif";
+
+$frame_white: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amn/frame_0_delay-0.1s.gif";
+$frame_white2: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amn/frame_1_delay-0.1s.gif";
+$frame_white3: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amn/frame_2_delay-0.1s.gif";
+$frame_white4: "https://raw.githubusercontent.com/elsowiny/DigitalAssets/master/amn/frame_3_delay-0.1s.gif";
+@-webkit-keyframes cursor {
+    0% {cursor: url($frame_white) 0 0, auto;}
+    25% {cursor: url($frame_white2) 0 0, auto;}
+    50% {cursor: url($frame_white3) 0 0, auto;}
+    75% {cursor: url($frame_white4) 0 0, auto;}
+    100% {cursor: url($frame_white) 0 0, auto;}
+
+  } 
+  
+  @keyframes cursor {
+    0% {cursor: url($frame_white) 0 0, auto;}
+    25% {cursor: url($frame_white2) 0 0, auto;}
+    50% {cursor: url($frame_white3) 0 0, auto;}
+    75% {cursor: url($frame_white4) 0 0, auto;}
+    100% {cursor: url($frame_white) 0 0, auto;}
+
+
+  }

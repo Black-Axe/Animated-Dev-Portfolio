@@ -1,0 +1,60 @@
+.accodion-style--1{
+    .accordion__item{
+        border: none !important;
+        overflow: hidden;
+        .accordion__heading{
+            display: inline-block;
+            position: relative;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            .accordion__button {
+                background: none;
+                color: #1f1f25;
+                font-size: 16px;
+                font-weight: 500;
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                margin: 0;
+                border: none;
+                box-shadow: none;
+                &[aria-disabled="true"],
+                &[aria-expanded="true"]{
+                    &::after{
+                        width: 100%;
+                        background: $theme-color;
+                    }
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    width: 50px;
+                    height: 2px;
+                    background: rgba(0,0,0,0.2);
+                    transition: 0.3s;
+                }
+                &::before{
+                    display: none;
+                    border: none !important;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .accordion__panel{
+            background: none;
+            border: none;
+            padding: 0 0 15px 0;
+            margin: 0;
+            font-weight: 300;
+            color: #717173;
+            animation: fadeInUp 0.1s;
+        }
+        &+.accordion__item {
+            margin-top: 10px;
+        }
+    }
+}

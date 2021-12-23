@@ -1,0 +1,189 @@
+/**
+ * Typography
+ */
+
+* {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+html {
+	overflow: hidden;
+	overflow-y: auto;
+}
+body {
+	overflow: hidden;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body-font;
+	color: $body-color;
+	font-weight: 400;
+}
+
+a {
+	transition: all 0.4s ease-in-out 0s;
+	color: #ac0404;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+address,
+p,
+pre,
+blockquote,
+dl,
+dd,
+menu,
+ol,
+ul,
+table,
+caption,
+hr {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $heading-font;
+	line-height: 1.4074;
+	color: $heading-color;
+}
+h1,
+.h1 {
+	font-size: $h1;
+}
+h2,
+.h2 {
+	font-size: $h2;
+}
+h3,
+.h3 {
+	font-size: $h3;
+}
+h4,
+.h4 {
+	font-size: $h4;
+}
+h5,
+.h5 {
+	font-size: $h5;
+}
+h6,
+.h6 {
+	font-size: $h6;
+}
+
+@media #{$md-layout} {
+	h1,
+	.h1 {
+		font-size: $h1 - 4;
+	}
+	
+	h2,
+	.h2 {
+		font-size: $h2 - 2;
+	}
+	h3,
+	.h3 {
+		font-size: $h3 - 2;
+	}
+}
+
+@media #{$sm-layout} {
+	h1,
+	.h1 {
+		font-size: $h1 - 6;
+	}
+	
+	h2,
+	.h2 {
+		font-size:$h2 - 4;
+	}
+	h3,
+	.h3 {
+		font-size: $h3 - 2;
+	}
+}
+
+@media #{$large-mobile} {
+	h1,
+	.h1 {
+		font-size: $h1 - 8;
+	}
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	font-weight: 400;
+}
+h4,
+.h4,
+h5,
+.h5 {
+	font-weight: 600;
+}
+h6,
+.h6 {
+	font-weight: 500;
+}
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+a:visited {
+	color: red;
+}
+input,
+button,
+select,
+textarea {
+	background: transparent;
+	border: 1px solid $border-color;
+	transition: all 0.4s ease-out 0s;
+	color: $body-color;
+	&:focus,
+	&:active {
+		outline: none;
+		border-color: $theme-color;
+	}
+}
+input,
+select,
+textarea {
+	width: 100%;
+	font-size: 14px;
+}
+input,
+select {
+	height: 40px;
+	padding: 0 15px;
+}

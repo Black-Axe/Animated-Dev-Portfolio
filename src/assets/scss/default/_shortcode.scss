@@ -1,0 +1,464 @@
+/*==============================
+ *  Utilities
+=================================*/
+/*====================================
+    Google Font  
+===================================*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800,900|Poppins:300,400,500,600,700,700i&display=swap');
+
+/*----------------------------------------
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+-------------------------------------*/
+
+.hidden {
+    display: none;
+}
+.fix{
+    overflow: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.poss_relative {
+    position: relative;
+}
+
+.poss_absolute {
+    position: absolute;
+}
+.lineheight--1 {
+    line-height: 1 !important;
+}
+.lineheight--1-5 {
+    line-height: 1.5!important;
+}
+.lineheight--1-8 {
+    line-height: 1.8!important;
+}
+
+
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.wrapper {
+    position: relative;
+}
+
+/* Define Colors */
+.theme-color {
+    color: $theme-color;
+}
+
+.theme-gradient {
+    background: rgb(248,31,1);
+    background: -moz-linear-gradient(145deg,  rgba(248,31,1,1) 0%, rgb(124, 15, 7) 100%);
+    background: -webkit-linear-gradient(145deg,  rgba(248,31,1,1) 0%,rgb(160, 2, 2) 100%);
+    background: linear-gradient(145deg,  rgba(248,31,1,1) 0%,rgb(204, 4, 4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f81f01', endColorstr='#ee076e',GradientType=1 );
+}
+
+.rn-text-white {
+    color: #c6c9d8 !important;
+}
+
+
+
+
+/*===============================
+    Background Color 
+=================================*/
+
+@include config-bg-colors('bg_color--',
+'1'$white,
+'2'$theme-color,
+'3'#f8f9fc,
+'4'#1a1b1f,
+'5'#f8f9fc,
+'6'#000000,
+'7'#101010
+);
+
+
+
+
+/*===========================
+    Background Image 
+=============================*/
+.bg_overlay:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00010c;
+    opacity: 0.57;
+}
+
+.bg_overlay {
+    position: relative;
+}
+
+
+.bg_image {
+    @extend %bgImagePosition;
+}
+
+p {
+    font-size: 18px;
+    line-height: 30px;
+    @media #{$sm-layout} {
+        font-size: 16px !important;
+        line-height: 28px !important;
+    }
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+/*=========================
+    Text specialized 
+==========================*/
+.text-italic {
+    font-style: italic;
+}
+.text-normal {
+    font-style: normal;
+}
+.text-underline {
+    font-style: underline;
+}
+
+
+/* Height and width */
+.fullscreen {
+    min-height: 100vh;
+    width: 100%;
+    @media #{$sm-layout} {
+        min-height: auto;
+    }
+    &.empty-div {
+        pointer-events: none;
+        background: transparent;
+    }
+
+}
+
+/*===================
+Custom Row
+======================*/
+.row--0 {
+    margin-left: -0px;
+    margin-right: -0px;
+
+    &>[class*="col"] {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.row--5 {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    &>[class*="col"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.row--10 {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &>[class*="col"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.row--20 {
+    margin-left: -20px;
+    margin-right: -20px;
+
+    // Responsive
+    @media #{$laptop-device} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$lg-layout} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$md-layout} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$sm-layout} {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+
+    &>[class*="col"],
+    &>[class*="col-"] {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        // Responsive
+        @media #{$laptop-device} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media #{$lg-layout} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media #{$md-layout} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        @media #{$sm-layout} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+}
+
+.row--35 {
+    margin-left: -35px;
+    margin-right: -35px;
+
+    // Responsive
+    @media #{$laptop-device} {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    @media #{$lg-layout} {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    @media #{$md-layout} {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    @media #{$sm-layout} {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+
+    &>[class*="col"],
+    &>[class*="col-"] {
+        padding-left: 35px;
+        padding-right: 35px;
+
+        // Responsive
+        @media #{$laptop-device} {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        @media #{$lg-layout} {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        @media #{$md-layout} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+
+        @media #{$sm-layout} {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+}
+
+
+/*===========================
+    Input Placeholder
+=============================*/
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+
+/*=============================
+	Overlay styles 
+==============================*/
+
+[data-overlay],
+[data-black-overlay],
+[data-white-overlay] {
+    position: relative;
+    z-index: 1;
+}
+
+[data-overlay]>div,
+[data-overlay]>*,
+[data-black-overlay]>div,
+[data-black-overlay]>*,
+[data-white-overlay]>div,
+[data-white-overlay]>* {
+    position: relative;
+    z-index: 1;
+}
+
+[data-overlay]:before,
+[data-black-overlay]:before,
+[data-white-overlay]:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+[data-overlay]:before {
+    background-color: $theme-color;
+}
+
+[data-black-overlay]:before {
+    background-color: #00010c;
+}
+
+[data-white-overlay]:before {
+    background-color: #b4abab;
+}
+
+@for $i from 1 through 10 {
+    [data-overlay="#{$i}"]:before,
+    [data-black-overlay="#{$i}"]:before,
+    [data-white-overlay="#{$i}"]:before {
+        opacity: #{$i * 0.10};
+    }
+}
+
+
+/*------------------------------
+    Scroll Up 
+--------------------------------*/
+#scrollUp {
+    width: 40px;
+    height: 40px;
+    background-color: $theme-color;
+    border: 3px solid #eeeeee;
+    color: $heading-color;
+    right: 20px;
+    bottom: 60px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50px;
+    z-index: 9811 !important;
+    @media #{$sm-layout} {
+        display: none !important;
+    }
+    & i {
+        display: block;
+        line-height: 34px;
+        font-size: 22px;
+    }
+
+    &:hover {
+        & i {
+            animation-name: fadeInUp;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+
+// Contact Form
+.form-message {
+    margin-bottom: 0;
+    text-align: center;
+
+    &.error {
+        margin-top: 20px;
+        color: #f80707;
+    }
+
+    &.success {
+        margin-top: 20px;
+        color: #0d8d2d;
+    }
+}
+
+
+
+.thumb, .thumbnail{
+    img{
+        border-radius: 6px;
+    }
+}
+img.react-parallax-bgimage {
+    object-fit: contain;
+}
+

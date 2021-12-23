@@ -1,0 +1,245 @@
+/* ---------------------------
+Testimonial Styles 
+------------------------------*/
+
+
+.react-tabs__tab-panel{
+    &.react-tabs__tab-panel--selected {
+        .rn-testimonial-content{
+            opacity: 1;
+            -webkit-filter: blur(0);
+            filter: blur(0);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
+.rn-testimonial-content {
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    transform: scale(0.2);
+    -webkit-transition: opacity .4s cubic-bezier(0.82,0,0.12,1) .2s,-webkit-filter .3s cubic-bezier(0.82,0,0.12,1) .1s,-webkit-transform .6s cubic-bezier(0.82,0,0.12,1);
+    transition: opacity .4s cubic-bezier(0.82,0,0.12,1) .2s,-webkit-filter .3s cubic-bezier(0.82,0,0.12,1) .1s,-webkit-transform .6s cubic-bezier(0.82,0,0.12,1);
+    transition: filter .3s cubic-bezier(0.82,0,0.12,1) .1s,transform .6s cubic-bezier(0.82,0,0.12,1),opacity .4s cubic-bezier(0.82,0,0.12,1) .2s;
+    transition: filter .3s cubic-bezier(0.82,0,0.12,1) .1s,transform .6s cubic-bezier(0.82,0,0.12,1),opacity .4s cubic-bezier(0.82,0,0.12,1) .2s,-webkit-filter .3s cubic-bezier(0.82,0,0.12,1) .1s,-webkit-transform .6s cubic-bezier(0.82,0,0.12,1);
+    .inner {
+        padding-bottom: 62px;
+        @media #{$sm-layout} {
+            padding-bottom: 20px;
+        }
+        @media #{$md-layout} {
+            padding-bottom: 30px;
+        }
+        p {
+            font-size: 36px;
+            line-height: 58px;
+            color: #18181b;
+            font-weight: 500;
+            padding: 0 9%;
+            margin-bottom: 0;
+            margin-top: -16px;
+            position: relative;
+            z-index: 2;
+            @media #{$lg-layout} {
+                font-size: 32px;
+                line-height: 53px;
+            } 
+            @media #{$md-layout} {
+                font-size: 28px;
+                line-height: 48px;
+                padding: 0;
+            } 
+            @media #{$sm-layout} {
+                font-size: 17px !important;
+                line-height: 30px !important;
+                padding: 0;
+                font-weight: 400;
+            } 
+
+            &::before{
+                position: absolute;
+                width: 197px;
+                height: 100%;
+                left: 25%;
+                top: -50px;
+             //   background-image: url(/assets/images/client/image-1.png);
+                content: "";
+                opacity: 1;
+                background-repeat: no-repeat;
+                z-index: -1;
+                @media #{$sm-layout} {
+                    top: -15px;
+                    background-size: 100px;
+                    left: 50%;
+                    right: 0;
+                    width: 100%;
+                    margin-left: -48px;
+                } 
+            }
+            &::after{
+                position: absolute;
+                width: 197px;
+                height: 202px;
+                right: 25%;
+                bottom: -115px;
+               // background-image: url(/assets/images/client/image-2.png);
+                content: "";
+                opacity: 1;
+                background-repeat: no-repeat;
+                z-index: -1;
+                @media #{$sm-layout} {
+                    display: none;
+                } 
+            }
+        }
+    }
+    .author-info{
+        margin-bottom: 50px;
+        @media #{$sm-layout} {
+            margin-bottom: 30px;
+        }
+        @media #{$md-layout} {
+            margin-bottom: 30px;
+        }
+        h6 {
+            font-size: 18px;
+            line-height: 50px;
+            color: #8c8c8c;
+            font-weight: 300;
+            @media #{$sm-layout} {
+                line-height: 20px;
+                font-size: 14px;
+            }
+            span{
+                color: #18181b;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+.rn-testimonial-light {
+    .rn-testimonial-content {
+        .inner {
+            p {
+                color: #c6c9d8;
+            }
+        }
+        .author-info {
+            h6 {
+                color: #ffffff;
+                span {
+                    color: #c6c9d8;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+.rn-paralax-testimonial{
+    .rn-testimonial-content{
+        .inner{
+            p{
+                color: #ffffff;
+                &::before,
+                &::after{
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+
+}
+
+
+/* ------------------------------
+Testimonial Thumbnail 
+-------------------------------- */
+
+ul {
+    &.testimonial-thumb-wrapper {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 510px;
+        margin: 0px auto;
+        margin-bottom: -30px;
+        outline: none;
+        @media #{$large-mobile} {
+            margin-bottom: -10px;
+        }
+        li {
+            padding-left: 15px;
+            padding-right: 15px;
+            flex-basis: 20%;
+            margin-bottom: 30px;
+            outline: none;
+            cursor: pointer;
+
+            @media #{$sm-layout} {
+                flex-basis: 20%;
+                margin-bottom: 14px;
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+
+            @media #{$large-mobile} {
+                flex-basis: 25%;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-bottom: 10px;
+            }
+
+            .thumb {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                img {
+                    @extend %transition;
+                    border-radius: 6px;
+                    width: 100%;
+                    &:hover {
+                        transform: scale(1.1);
+                        object-fit: contain;
+                        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+                    }
+                }
+                &::after {
+                    width: 13px;
+                    height: 13px;
+                    background: #f9004d;
+                    right: -8.5px;
+                    top: -8.5px;
+                    position: absolute;
+                    content: "";
+                    border-radius: 100%;
+                    @extend %transition;
+                    opacity: 0;
+                    transform: scale(0);
+                }
+            }
+            &.react-tabs__tab--selected {
+                .thumb {
+                    &::after {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                    img {
+                        transform: scale(1.1);
+                        object-fit: contain;
+                        border-radius: 6px;
+                        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+        }
+    }
+}

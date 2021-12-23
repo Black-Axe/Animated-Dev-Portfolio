@@ -1,0 +1,136 @@
+/*-------------------------------
+    Pricing Area  
+--------------------------------*/
+
+.rn-pricing {
+    border: 2px solid #f42958;
+    border-radius: 5px;
+    transition: all 0.6s cubic-bezier(0.33, 0.84, 0.31, 0.98);
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        z-index: -1;
+        display: inline-block;
+        content: '';
+        -webkit-transition: all 0.6s cubic-bezier(0.33, 0.84, 0.31, 0.98);
+        transition: all 0.6s cubic-bezier(0.33, 0.84, 0.31, 0.98);
+        opacity: 0;
+        border-radius: 5px;
+        background-color: #f81f01;
+        background-image: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+    }
+    .pricing-table-inner{
+        padding: 40px;
+        .pricing-header {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+            border-bottom: 1px solid rgba(248, 31, 1, 0.1);
+            h4 {
+                &.title {
+                    margin-bottom: 30px;
+                }
+            }
+            .pricing {
+                span {
+                    display: block;
+                    &.price {
+                        font-size: 100px;
+                        color: #f81f01;
+                        line-height: 1;
+                    }
+                    &.subtitle {
+                        font-size: 14px;
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+        .pricing-body {
+            text-align: left;
+            margin-bottom: 48px;
+            ul {
+                &.list-style--1 {
+
+                }
+            }
+        }
+        .pricing-footer {
+            text-align: center;
+            a {
+                &.rn-btn {
+                    @extend %transition;
+                }
+            }
+        }
+    }
+
+    &:hover,
+    &.active {
+        &::before {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+        .pricing-table-inner{
+            .pricing-header {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                h4 {
+                    &.title {
+                        color: #ffffff;
+                    }
+                }
+                .pricing {
+                    span {
+                        display: block;
+                        &.price {
+                            color: #ffffff;
+                        }
+                        &.subtitle {
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+            .pricing-body {
+                ul {
+                    &.list-style--1 {
+                        li {
+                            color: #ffffff;
+                            svg {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
+            .pricing-footer {
+                text-align: center;
+                a {
+                    &.rn-btn {
+                        background: #ffffff;
+                        color: $theme-color;
+                        border-color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,259 @@
+/*------------------------
+    Team Styles 
+----------------------*/
+
+.team {
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+    .thumbnail {
+        display: block;
+        position: relative;
+        z-index: 1;
+        img {
+            width: 100%;
+            @extend %transition;
+        }
+        &::after {
+            background: linear-gradient(to bottom, #fc004d 0, #000000 100%);
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            z-index: 1;
+            opacity: 0;
+            @extend %transition;
+
+        }
+    }
+    .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 40px;
+        z-index: 2;
+        h4 {
+            &.title {
+                color: #ffffff;
+                margin: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition-delay: 0.25s;
+                transform: translateY(10px);
+                transition: all 0.45s cubic-bezier(0.23, 0.88, 0.34, 0.99);
+
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
+        p {
+            &.designation {
+                color: #c6c9d8;
+                font-size: 14px;
+                line-height: 34px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.45s cubic-bezier(0.23, 0.88, 0.34, 0.99);
+                transform: translateY(10px);
+            }
+        }
+    }
+    ul {
+        &.social-icon {
+            position: absolute;
+            top: 25px;
+            left: 35px;
+            padding: 0;
+            z-index: 2;
+            list-style: none;
+            display: flex;
+            margin: 0 -10px;
+            li {
+                margin: 0 10px;
+                transform: translateY(8px) scale(0.8);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.45s cubic-bezier(0.23, 0.88, 0.34, 0.99);
+
+                a {
+                    color: #ffffff;
+                    font-size: 15px;
+                    transition: 0.3s;
+                    svg{
+                        transition: 0.3s;
+                    }
+                    &:hover{
+                        svg{
+                            transform: scale(1.3);
+                        }
+
+                    }
+                }
+                
+            }
+        }
+    }
+    &.team-style--bottom {
+        ul {
+            &.social-icon {
+                top: auto;
+                left: 40px;
+                bottom: 105px;
+            }
+        }
+        .content  {
+            h4 {
+                &.title {
+                    margin-bottom: 1px;
+                }
+            }
+        }
+    }
+
+
+    &:hover {
+        .content {
+            h4 {
+                &.title {
+                    transition-delay: 0.25s;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
+            p{
+                &.designation {
+                    transition-delay: 0.33s;
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+        }
+        .thumbnail {
+            &::after{
+                opacity: 0.85;
+                top: 0;
+            }
+        }
+        ul {
+            &.social-icon {
+                li {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                    
+                    &:nth-child(1){
+                        -webkit-transition-delay: .07692s;
+                        transition-delay: .07692s;
+                    }
+
+                    &:nth-child(2){
+                        -webkit-transition-delay: .15385s;
+                        transition-delay: .15385s;
+                    }
+
+                    &:nth-child(3){
+                        -webkit-transition-delay: .23077s;
+                        transition-delay: .23077s;
+                    }
+
+                    &:nth-child(4){
+                        -webkit-transition-delay: .33077s;
+                        transition-delay: .23077s;
+                    }
+
+                    &:nth-child(5){
+                        -webkit-transition-delay: .43077s;
+                        transition-delay: .23077s;
+                    }
+                }
+            }
+        }
+        .content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+
+
+
+/*-------------------
+    Team Static  
+---------------------*/
+
+.team-static{
+    .inner {
+        padding-top: 17px;
+        .content {
+            .title {
+                margin-bottom: 2px;
+                font-size: 16px;
+            }
+            p {
+                &.designation {
+                    margin-bottom: 5px;
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .social-share{
+
+        }
+    }
+}
+
+
+
+
+
+
+
+/*----------------------
+    Social Share 
+------------------------*/
+ul {
+    &.social-transparent {
+        margin: -8px;
+        li {
+            margin: 8px;
+            a {
+                width: auto;
+                display: inline-block;
+                height: auto;
+                border: 0 none;
+                line-height: initial;
+                color: #000;
+                border-radius: 100%;
+                text-align: center;
+                font-size: 14px;
+                transition: 0.3s;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

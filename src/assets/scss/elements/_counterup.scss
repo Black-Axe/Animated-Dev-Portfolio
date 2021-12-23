@@ -1,0 +1,127 @@
+/*========================
+    Counterup Area 
+==========================*/
+
+// Counter Style One
+.counterup_style--1 {
+    text-align: center;
+    margin-top: 40px;
+    h5{
+        &.counter{
+            font-size: 72px;
+            line-height: 80px;
+            display: inline-block;
+            margin-bottom: 17px;
+            position: relative;
+            display: inline-block;
+            color: $theme-color;
+            margin-left: -20px;
+            @media #{$sm-layout} {
+                font-size: 45px;
+                line-height: 56px;
+                margin-bottom: 5px;
+                margin-left: -11px;
+            }
+            &::after{
+                right: -26px;
+                position: absolute;
+                top: -17px;
+                font-size: 40px;
+                content: "+";
+            }
+            span {
+                
+            }
+        }
+    }
+    p{
+        &.description {
+            font-size: 18px;
+            line-height: 30px;
+            padding: 0 5%;
+            color: rgba(29, 29, 36, 0.75);
+            @media #{$md-layout} {
+                font-size: 16px;
+                line-height: 28px;
+                padding: 0;
+            }
+            @media #{$sm-layout} {
+                font-size: 16px;
+                line-height: 28px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+.rn-paralax-counterup{
+    .counterup_style--1{
+        text-align: center;
+        h5{
+            &.counter{
+                color: $theme-color;
+            }
+        }
+        p{
+            &.description {
+                color: #ffffff;
+            }
+        }
+    }
+}
+// Counter Style Two
+.counterup_style--2 {
+    text-align: center;
+    h5{
+        &.counter{
+            font-size: 50px;
+            line-height: 60px;
+            color: #f9004d;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    }
+    h4 {
+        &.description {
+            font-size: 16px;
+            line-height: 30px;
+            padding: 0 10%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Counter White Cersion
+.theme-text-white{
+    .counterup_style--1 {
+        h5{
+            &.counter{
+                color: #ffffff;
+            }
+        }
+        p{
+            &.description {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+/*--------------------
+Footer Styles 
+----------------------*/
+
+.footer-wrapper {
+    position: relative;
+}
+
+.footer-left {
+    background: linear-gradient(145deg, #f81f01 0%, #ee076e 100%);
+    padding: 77px 120px;
+    position: relative;
+    z-index: 2;
+    margin-right: -15px;
+    border-top-right-radius: 6px;
+
+    @media #{$lg-layout} {
+        padding: 120px 80px;
+    }
+    @media #{$md-layout} {
+        padding: 60px 70px;
+    }
+
+    @media #{$sm-layout} {
+        padding: 60px 30px;
+    }
+
+    .inner {
+        z-index: 5;
+        position: relative;
+        &::after{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            z-index: -1;
+            font-size: 240px;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.1);
+            transform: translateY(-50%);
+            width: 295px;
+            height: 301px;
+        }
+        >span {
+            color: #fff;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            display: block;
+            margin-bottom: 9px;
+            @media #{$large-mobile} {
+                letter-spacing: 1px;
+                margin-bottom: 9px;
+            }
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 75px;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 90px;
+            
+            @media #{$lg-layout} {
+                font-size: 50px;
+                line-height: 61px;
+            }
+
+            @media #{$sm-layout} {
+                font-size: 45px;
+                line-height: 51px;
+            }
+        }
+        a {
+            &.rn-button-style--2 {
+                margin-top: 30px;
+                border-color: #ffffff;
+                color: #ffffff;
+                @media #{$sm-layout} {
+                    margin-top: 10px;
+                    padding: 10px 23px;
+                }
+                @media #{$large-mobile} {
+                    padding: 7px 16px;
+                }
+                &:hover {
+                    background: #fff;
+                    border-color: #fff;
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.footer-right {
+    padding: 150px 70px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-left: 120px;
+
+    @media #{$lg-layout} {
+        padding: 119px 21px;
+        padding-left: 70px;
+    }
+    @media #{$md-layout} {
+        padding: 60px 70px;
+    }
+
+    @media #{$sm-layout} {
+        padding: 60px 30px;
+    }
+    .footer-link {
+        h4 {
+            color: #c6c9d8;
+            font-weight: 500;
+            margin-bottom: 30px;
+            opacity: 0.75;
+            @media #{$sm-layout} {
+                margin-bottom: 14px;
+            }
+        }
+        ul {
+            &.ft-link {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    a {
+                        color: #c6c9d8;
+                        font-size: 16px;
+                        @extend %transition;
+                        opacity: 0.75;
+                    }
+                    &:hover {
+                        a {
+                            color: $theme-color;
+                        }
+                    }
+                    & + li {
+                        margin-top: 13px;
+                        @media #{$sm-layout} {
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Footer Style Two  */
+.footer-style-2 {
+    p {
+        color: #c6c9d8;
+        font-size: 14px;
+        opacity: 0.75;
+    }
+}
+
+
+
+
+
+.copyright-text {
+    position: absolute;
+    bottom: -114px;
+
+    @media #{$sm-layout} {
+        position: static;
+        bottom: 0;
+        padding-top: 33px;
+    }
+
+    @media #{$md-layout} {
+        position: static;
+        bottom: 0;
+        padding-top: 33px;
+    }
+    p {
+        color: #c6c9d8;
+        font-size: 14px;
+        opacity: 0.75;
+    }
+}
