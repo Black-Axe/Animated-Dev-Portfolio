@@ -2,11 +2,11 @@
 <h2>Animated Software Developer Portfolio Template</h2>
 <h5>Includes blog and contact form</h5>
 
-<img src="/RepoImage/cov.png" />
-<img src="/RepoImage/exampletwo.png" />
-<img src="/RepoImage/projects.png" />
-<img src="/RepoImage/contact.png" />
-<img src="/RepoImage/blog.png" />
+<img src="_github/repo-image/cov.png" />
+<img src="_github/repo-image/exampletwo.png" />
+<img src="_github/repo-image/projects.png" />
+<img src="_github/repo-image/contact.png" />
+<img src="_github/repo-image/blog.png" />
 
 If you want your own customized logo I highly recommend 
 using https://www.canva.com/
