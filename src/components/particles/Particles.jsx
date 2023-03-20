@@ -1,26 +1,23 @@
 import React from 'react'
-import Particles from 'react-tsparticles';
+import Particles from 'react-tsparticles'
 
-import options from "./options";
+import options from './options'
 
 export default function ReactParticles() {
-    return (
-        <div>
-            <Particles
-                className="particles"
-                options={options}
-            />
-        </div>
-    )
+  return (
+
+    <Particles
+      className="particles"
+      options={options}
+    />
+  )
 }
-     
-export function ReactFormParticles(){
-    return (
-        <div className="particlesRelative">
-            <Particles
-                className="formParticles"
-                options={options}
-            />
-        </div>
-    )
-}
+
+export const ReactFormParticles = () => (
+  <div className="particlesRelative">
+    <Particles
+      className="formParticles"
+      options={options}
+    />
+  </div>
+)

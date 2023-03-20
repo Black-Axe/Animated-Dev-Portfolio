@@ -50,7 +50,7 @@ const Header = () => {
         <div className="header-left d-flex align-items-center">
           <div className="logo">
             <a href={homeLink}>
-              <img src={logo} id="logoResize" alt="sherief elsowiny" />
+              <img src={logo} id="logoResize" alt="Logo" />
             </a>
           </div>
           <nav className="mainmenunav d-lg-block ml--50">
