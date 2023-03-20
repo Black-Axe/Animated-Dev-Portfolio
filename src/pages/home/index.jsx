@@ -1,6 +1,4 @@
 import React from 'react'
-import ScrollToTop from 'react-scroll-up'
-import { FiChevronUp } from 'react-icons/fi'
 
 import About from '../../components/about/About'
 import Slider from '../../components/slider/Slider'
@@ -10,29 +8,19 @@ import Header from '../../components/header/Header'
 import Portfolio from '../../components/portfolio/Portfolio'
 import Footer from '../../components/footer/Footer'
 import Contact from '../../components/contact/contact'
+import ScrollToTop from '../../components/scroll-to-top/index'
 import HomeContainer from './container'
 
 const HomePage = () => (
   <HomeContainer>
-
     <Header />
     <Slider />
-
     <About />
     <Services />
     <Portfolio displayCount={6} />
-
     <Contact />
-
     <Footer />
-
-    {/* Start Back To Top */}
-    <div className="backto-top">
-      <ScrollToTop showUnder={160}>
-        <FiChevronUp />
-      </ScrollToTop>
-    </div>
-    {/* End Back To Top */}
+    <ScrollToTop />
 
   </HomeContainer>
 )
