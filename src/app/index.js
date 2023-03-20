@@ -2,7 +2,7 @@ import React from 'react'
 import {
   BrowserRouter, Routes, Route, Navigate
 } from 'react-router-dom'
-import HomePage from '../pages/Home'
+import HomePage from '../pages/home/index'
 import './App.css'
 import Blog from '../components/blog'
 import BlogDetails from '../components/blog/BlogDetails'
