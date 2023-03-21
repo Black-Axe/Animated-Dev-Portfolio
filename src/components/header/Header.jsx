@@ -1,51 +1,63 @@
-import React, { useEffect } from 'react'
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { useEffect, useRef } from 'react'
 import Scrollspy from 'react-scrollspy'
 import { FiX, FiMenu, FiGithub } from 'react-icons/fi'
-import logo from './blackaxelogo.png'
+import logo from '../../assets/img/blackaxelogo.png'
 import { SocialShare, GithubLink } from './config'
 
 const Header = () => {
   const homeLink = '/'
   const headerColor = 'color-black'
 
-  function menuTrigger() {
-    document.querySelector('.header-wrapper').classList.toggle('menu-open')
-  }
-  function closeMenuTrigger() {
-    document.querySelector('.header-wrapper').classList.remove('menu-open')
-  }
+  const headerRef = useRef(null)
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.has-droupdown > a')
+    const elements = headerRef.current.querySelectorAll('.has-droupdown > a')
 
-    function Sticky() {
+    function stickyHeader() {
       const value = window.scrollY
       if (value > 100) {
-        document.querySelector('.header--fixed').classList.add('sticky')
+        headerRef.current.classList.add('sticky')
       } else {
-        document.querySelector('.header--fixed').classList.remove('sticky')
+        headerRef.current.classList.remove('sticky')
       }
     }
-    window.addEventListener('scroll', Sticky)
 
-    for (const i in elements) {
-      if (elements.hasOwnProperty(i)) {
-        elements[i].addEventListener('click', function () {
-          if (this.parentElement.querySelector('.submenu') !== null) {
-            this.parentElement.querySelector('.submenu').classList.toggle('active')
-          }
-        })
-      }
-    }
+    window.addEventListener('scroll', stickyHeader)
+
+    elements.forEach((element) => {
+      element.addEventListener('click', () => {
+        const submenu = element.parentElement.querySelector('.submenu')
+        if (submenu !== null) {
+          submenu.classList.toggle('active')
+        }
+      })
+    })
 
     return () => {
-      window.removeEventListener('scroll', Sticky)
+      window.removeEventListener('scroll', stickyHeader)
+      elements.forEach((element) => {
+        element.removeEventListener('click', () => {
+          const submenu = element.parentElement.querySelector('.submenu')
+          if (submenu !== null) {
+            submenu.classList.toggle('active')
+          }
+        })
+      })
     }
   }, [])
 
-  return (
+  function menuTrigger() {
+    headerRef.current.classList.toggle('menu-open')
+  }
 
-    <header className={`header-area header-style-two header--fixed ${headerColor}`}>
+  function closeMenuTrigger() {
+    headerRef.current.classList.remove('menu-open')
+  }
+
+  return (
+    <header ref={headerRef} className={`header-area header-style-two header--fixed ${headerColor}`}>
       <div className="header-wrapper">
         <div className="header-left d-flex align-items-center">
           <div className="logo">

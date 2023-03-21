@@ -1,43 +1,44 @@
-import React, { useEffect } from 'react'
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { useEffect, useRef } from 'react'
 import Scrollspy from 'react-scrollspy'
-
 import { FiX, FiMenu, FiGithub } from 'react-icons/fi'
-import logo from './blackaxelogo.png'
+import logo from '../../assets/img/blackaxelogo.png'
 import { SocialShare, GithubLink } from './config'
 
-export default function InnerHeader() {
+const InnerHeader = () => {
   const homeLink = '/'
   const headerColor = 'color-black'
+  const headerRef = useRef(null)
 
   function menuTrigger() {
-    document.querySelector('.header-wrapper').classList.toggle('menu-open')
+    headerRef.current.classList.toggle('menu-open')
   }
   function closeMenuTrigger() {
-    document.querySelector('.header-wrapper').classList.remove('menu-open')
+    headerRef.current.classList.remove('menu-open')
   }
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.has-droupdown > a')
+    const elements = headerRef.current.querySelectorAll('.has-droupdown > a')
 
     function Sticky() {
       const value = window.scrollY
       if (value > 100) {
-        document.querySelector('.header--fixed').classList.add('sticky')
+        headerRef.current.querySelector('.header--fixed').classList.add('sticky')
       } else {
-        document.querySelector('.header--fixed').classList.remove('sticky')
+        headerRef.current.querySelector('.header--fixed').classList.remove('sticky')
       }
     }
     window.addEventListener('scroll', Sticky)
 
-    for (const i in elements) {
-      if (elements.hasOwnProperty(i)) {
-        elements[i].addEventListener('click', function () {
-          if (this.parentElement.querySelector('.submenu') !== null) {
-            this.parentElement.querySelector('.submenu').classList.toggle('active')
-          }
-        })
-      }
-    }
+    elements.forEach((element) => {
+      element.addEventListener('click', () => {
+        const submenu = element.parentElement.querySelector('.submenu')
+        if (submenu !== null) {
+          submenu.classList.toggle('active')
+        }
+      })
+    })
 
     return () => {
       window.removeEventListener('scroll', Sticky)
@@ -45,8 +46,7 @@ export default function InnerHeader() {
   }, [])
 
   return (
-
-    <header className={`header-area header-style-two header--fixed ${headerColor}`}>
+    <header ref={headerRef} className={`header-area header-style-two header--fixed ${headerColor}`}>
       <div className="header-wrapper">
         <div className="header-left d-flex align-items-center">
           <div className="logo">
@@ -88,6 +88,7 @@ export default function InnerHeader() {
           <div className="close-menu d-block d-lg-none">
             <span onClick={closeMenuTrigger} className="closeTrigger"><FiX /></span>
           </div>
+
         </div>
       </div>
 
@@ -95,3 +96,5 @@ export default function InnerHeader() {
 
   )
 }
+
+export default InnerHeader

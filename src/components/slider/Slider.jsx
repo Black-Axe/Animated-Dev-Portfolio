@@ -1,9 +1,8 @@
 import React from 'react'
 
 import TextLoop from 'react-text-loop'
-import Particles from '../particles/Particles'
 
-export default function Slider() {
+const Slider = () => {
   const introText = 'Hi, I\'m Name'
   const SlideList = [
     {
@@ -41,10 +40,10 @@ export default function Slider() {
                         <br />
                         <TextLoop>
                           {
-                                                    loopText.map((val, i) => (
-                                                      <span data-text={val} key={i} className="text-glitched">{val}</span>
-                                                    ))
-                                                }
+                            loopText.map((val, i) => (
+                              <span data-text={val} key={i} className="text-glitched">{val}</span>
+                            ))
+                          }
                         </TextLoop>
                         {' '}
                       </h1>
@@ -66,3 +65,5 @@ export default function Slider() {
 
   )
 }
+
+export default Slider

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../header/blackaxelogo.png'
+import logo from '../../assets/img/blackaxelogo.png'
 
 import { SocialShare } from '../header/config'
 

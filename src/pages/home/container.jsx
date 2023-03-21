@@ -11,7 +11,6 @@ const HomeContainer = (props) => {
     <div>
       <Helmet />
       <div className="active-dark">
-
         <Particles />
 
         {children}
