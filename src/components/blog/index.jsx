@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { sanitize } from 'dompurify'
+import { sanitize } from 'isomorphic-dompurify'
 import ScrollToTop from 'react-scroll-up'
 import { FiChevronUp } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
