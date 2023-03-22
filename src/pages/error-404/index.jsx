@@ -1,9 +1,9 @@
 import React from 'react'
 import ScrollToTop from 'react-scroll-up'
 import { FiChevronUp } from 'react-icons/fi'
-import Footer from '../components/footer/Footer'
-import Particles from '../components/particles'
-import WrappedHeader from '../wrapped-components/header'
+import Footer from '../../components/footer'
+import Particles from '../../components/particles'
+import WrappedHeader from '../../wrapped-components/header'
 
 const Error404 = () => (
   <>

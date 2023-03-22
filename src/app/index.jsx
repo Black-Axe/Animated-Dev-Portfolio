@@ -6,7 +6,7 @@ import HomePage from '../pages/home/index'
 import './App.css'
 import Blog from '../pages/blog'
 import BlogDetails from '../pages/blog-details'
-import Error404 from '../pages/Error404'
+import Error404 from '../pages/error-404'
 
 const App = () => (
   <BrowserRouter basename="/" element={<HomePage />}>

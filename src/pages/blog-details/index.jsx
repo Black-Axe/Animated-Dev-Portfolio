@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom'
 
 import { sanitize } from 'isomorphic-dompurify'
 import WrappedHeader from '../../wrapped-components/header'
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer'
 import Particles from '../../components/particles'
 import Helmet from '../../components/common/Helmet'
 
@@ -49,14 +49,7 @@ const BlogDetails = () => {
       setConvertedDate(dateConverter(Date.now()))
       setContent(sanitize(postFromSlug.content.rendered))
       setAuthor(postFromSlug.author)
-      /*
-            const response = await fetch(fetchUrl);
-            if(!response.ok){
-                return;
-            }
-            */
 
-      // using dummy data
       const resp = await fetch('https://jsonplaceholder.typicode.com/posts')
       const posts = await resp.json()
       const randomPost = posts[Math.floor(Math.random() * posts.length)]

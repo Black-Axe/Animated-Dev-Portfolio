@@ -5,7 +5,7 @@ import ScrollToTop from 'react-scroll-up'
 import { FiChevronUp } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import WrappedHeader from '../../wrapped-components/header'
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer'
 import Particles from '../../components/particles'
 import Helmet from '../../components/common/Helmet'
 
@@ -16,17 +16,17 @@ const Blog = () => {
   const [posts, setPosts] = useState([])
   useEffect(() => {
     const loadPosts = async () => {
-      const response = await fetch(fetchUrl)
-      if (!response.ok) {
-        // oups! something went wrong
-        return
+      try {
+        const response = await fetch(fetchUrl)
+
+        const postsResp = await response.json()
+        const slicedPosts = postsResp.slice(0, 30)
+        setPosts(slicedPosts)
+
+        console.log(posts)
+      } catch (error) {
+        setPosts([])
       }
-
-      const postsResp = await response.json()
-      const slicedPosts = postsResp.slice(0, 30)
-      setPosts(slicedPosts)
-
-      console.log(posts)
     }
     loadPosts()
   }, [])

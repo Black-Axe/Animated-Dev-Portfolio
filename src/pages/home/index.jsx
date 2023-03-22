@@ -8,7 +8,7 @@ import Services from './components/services'
 
 import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/contact'
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer'
 import ScrollToTop from '../../components/scroll-to-top/index'
 import WrappedHeader from '../../wrapped-components/header'
 

@@ -75,7 +75,7 @@ const skills = [
     icon: <DiReact size={iconSize} />
   },
   {
-    name: Node.js,
+    name: 'Node.js',
     icon: <IoLogoNodejs size={iconSize} />
   },
   {
