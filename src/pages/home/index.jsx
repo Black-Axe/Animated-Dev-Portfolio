@@ -4,7 +4,7 @@ import HomeContainer from './components/container/container'
 
 import Slider from './components/slider/Slider'
 import About from './components/about/About'
-import Services from './components/services/Services'
+import Services from './components/services'
 
 import Portfolio from './components/portfolio/Portfolio'
 import Contact from './components/contact/contact'

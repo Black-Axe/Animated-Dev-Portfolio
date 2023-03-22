@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React, { useEffect, useState } from 'react'
 
 import { FiClock, FiChevronUp } from 'react-icons/fi'
@@ -5,7 +6,7 @@ import { GiRobotAntennas } from 'react-icons/gi'
 
 import ScrollToTop from 'react-scroll-up'
 
-import { useNavigate, useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { sanitize } from 'isomorphic-dompurify'
 import WrappedHeader from '../../wrapped-components/header'
@@ -13,7 +14,7 @@ import Footer from '../../components/footer/Footer'
 import Particles from '../../components/particles'
 import Helmet from '../../components/common/Helmet'
 
-const BlogDetails = ({ match, data }) => {
+const BlogDetails = () => {
   const { blogSlug } = useParams()
   const [postFromSlug, setPostFromSlug] = useState({
     title: {
@@ -38,8 +39,6 @@ const BlogDetails = ({ match, data }) => {
   const [author, setAuthor] = useState('')
 
   const dateConverter = (date) => new Date(date).toLocaleDateString()
-
-  const titleStrip = (title) => title.replace(/[^a-zA-Z]/g, '')
 
   useEffect(() => {
     async function getPostBySlug() {
@@ -69,7 +68,7 @@ const BlogDetails = ({ match, data }) => {
     return () => {
       setPostFromSlug({})
     }
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
 

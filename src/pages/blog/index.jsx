@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React, { useEffect, useState } from 'react'
 import { sanitize } from 'isomorphic-dompurify'
 import ScrollToTop from 'react-scroll-up'
@@ -29,8 +30,6 @@ const Blog = () => {
     }
     loadPosts()
   }, [])
-
-  const cleanTitle = (title) => title.replace(/[^a-zA-Z]/g, '')
 
   return (
     <>
@@ -65,7 +64,7 @@ const Blog = () => {
                           </p>
                           <h2
                             data-text={post.title}
-                            className="elsowinyBlog"
+                            className="blog-styles"
                             dangerouslySetInnerHTML={{ __html: sanitize(post.title) }}
                           />
 

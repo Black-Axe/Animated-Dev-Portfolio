@@ -1,5 +1,5 @@
 import React from 'react'
-import services from './ServicesList'
+import services from './list'
 
 const Services = () => {
   const title = 'Services'

@@ -3,7 +3,7 @@ import { BsTerminal } from 'react-icons/bs'
 import { GiTeacher } from 'react-icons/gi'
 import React from 'react'
 
-const ElsowinyServiceList = [
+const list = [
   {
     icon: <GrReactjs />,
     title: 'Web App Development',
@@ -28,4 +28,4 @@ const ElsowinyServiceList = [
   }
 ]
 
-export default ElsowinyServiceList
+export default list

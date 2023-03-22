@@ -1,29 +1,19 @@
 import React from 'react'
-import { DiReact, DiDjango, DiSass } from 'react-icons/di'
-import { IoLogoNodejs } from 'react-icons/io'
-import {
-  SiExpress, SiFlask, SiPython,
-  SiTypescript, SiRedux, SiMysql,
-  SiMongodb, SiPostgresql, SiGithub, SiBitbucket,
-  SiJest, SiTestinglibrary, SiAirbnb,
-  SiFirebase, SiAmazonaws, SiGoogle, SiHeroku, SiDocker, SiKubernetes,
-  SiSpringboot, SiHtml5, SiCss3
-} from 'react-icons/si'
 
 import {
   Tab, Tabs, TabList, TabPanel
 } from 'react-tabs'
-import { FaGit } from 'react-icons/fa'
 
-import {
-  mainSkills, experience, education, skills
-} from './config'
+import MainSkillsTab from './components/main-skills'
+import ExperienceTab from './components/experience'
+import EducationTab from './components/education'
+import SkillsTab from './components/skills'
 
-export default function HomeTabs() {
+const HomeTabs = () => {
   const tab1 = 'Main skills'
-  const tab3 = 'Experience'
-  const tab4 = 'Education'
-  const tab5 = 'Frameworks & Tools'
+  const tab2 = 'Experience'
+  const tab3 = 'Education'
+  const tab4 = 'Frameworks & Tools'
   const tabStyle = 'tab-style--1'
 
   return (
@@ -36,107 +26,25 @@ export default function HomeTabs() {
               <Tabs>
                 <TabList className={`${tabStyle}`}>
                   <Tab>{tab1}</Tab>
-                  {/*   <Tab>{tab2}</Tab>   */}
+                  <Tab>{tab2}</Tab>
                   <Tab>{tab3}</Tab>
                   <Tab>{tab4}</Tab>
-                  <Tab>{tab5}</Tab>
                 </TabList>
 
                 <TabPanel>
-                  <div className="single-tab-content">
-                    <ul>
-                      {mainSkills.map((val, i) => (
-                        <li key={i}>
-                          <span className="tabHeader">
-                            {val.title}
-                            {' '}
-                            -
-                            {' '}
-                            <span className="lvl">{val.exp}</span>
-                          </span>
-                          <br />
-                          {val.description}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <MainSkillsTab />
                 </TabPanel>
 
                 <TabPanel>
-                  <div className="single-tab-content">
-                    <ul>
-                      {
-                                                    experience.map((val, i) => (
-                                                      <li key={i}>
-                                                        <span className="tabHeader">
-                                                          {val.title}
-                                                          {' '}
-                                                          -
-                                                          {' '}
-                                                          <span className="lvl">{val.company}</span>
-                                                        </span>
-                                                        <br />
-                                                        {val.timeline}
-                                                      </li>
-                                                    ))
-
-                                               }
-                    </ul>
-                  </div>
+                  <ExperienceTab />
                 </TabPanel>
 
                 <TabPanel>
-                  <div className="single-tab-content">
-                    <ul>
-                      {
-                                                    education.map((val, i) => (
-                                                      <li key={i}>
-                                                        <span className="tabHeader">
-                                                          {val.title}
-                                                          {' '}
-                                                          -
-                                                          {' '}
-                                                          <span className="lvl">{val.school}</span>
-                                                        </span>
-                                                        <br />
-                                                        {val.description}
-                                                        <br />
-                                                        <span>
-                                                          Graduation:
-                                                          {' '}
-                                                          <span className="lvl">
-                                                            {val.graduation}
-                                                            {' '}
-                                                          </span>
-                                                        </span>
-                                                      </li>
-                                                    ))
-                                               }
-
-                    </ul>
-                  </div>
+                  <EducationTab />
                 </TabPanel>
 
                 <TabPanel>
-                  <div className="single-tab-content">
-                    <ul>
-                      <li>
-                        {
-                                                              skills.map((val, i) => (
-                                                                <span key={i}>
-                                                                  <span className="lvlSkills">
-                                                                    {val.icon}
-                                                                    {' '}
-                                                                  </span>
-                                                                  <span className="lvlSkillsTwo">{val.name}</span>
-                                                                </span>
-                                                              ))
-
-                                                      }
-                      </li>
-
-                    </ul>
-                  </div>
+                  <SkillsTab />
                 </TabPanel>
 
               </Tabs>
@@ -148,3 +56,5 @@ export default function HomeTabs() {
     </div>
   )
 }
+
+export default HomeTabs
