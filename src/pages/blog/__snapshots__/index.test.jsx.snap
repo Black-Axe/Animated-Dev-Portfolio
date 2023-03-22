@@ -1,0 +1,5 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders snapshot of blog page 1`] = `<Blog />`;
+
+exports[`renders snapshot of home page 1`] = `<Blog />`;
