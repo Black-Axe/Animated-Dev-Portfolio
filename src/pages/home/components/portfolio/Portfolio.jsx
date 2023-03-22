@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react'
 import { GiMagnifyingGlass } from 'react-icons/gi'
@@ -35,12 +37,10 @@ const Portfolio = ({ displayCount }) => {
   }
 
   useEffect(
-    () =>
-    // clean up the dialog
-      () => {
-        setOpen(false)
-        setSelectedProject(null)
-      },
+    () => () => {
+      setOpen(false)
+      setSelectedProject(null)
+    },
     []
   )
 

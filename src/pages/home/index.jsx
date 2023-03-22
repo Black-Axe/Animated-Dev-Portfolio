@@ -1,19 +1,20 @@
 import React from 'react'
 
-import About from '../../components/about/About'
-import Slider from '../../components/slider/Slider'
-import Services from '../../components/services/Services'
+import HomeContainer from './components/container/container'
 
-import Header from '../../components/header/Header'
-import Portfolio from '../../components/portfolio/Portfolio'
+import Slider from './components/slider/Slider'
+import About from './components/about/About'
+import Services from './components/services/Services'
+
+import Portfolio from './components/portfolio/Portfolio'
+import Contact from './components/contact/contact'
 import Footer from '../../components/footer/Footer'
-import Contact from '../../components/contact/contact'
 import ScrollToTop from '../../components/scroll-to-top/index'
-import HomeContainer from './container'
+import WrappedHeader from '../../wrapped-components/header'
 
 const HomePage = () => (
   <HomeContainer>
-    <Header />
+    <WrappedHeader />
     <Slider />
     <About />
     <Services />

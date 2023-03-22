@@ -3,10 +3,10 @@ import { sanitize } from 'isomorphic-dompurify'
 import ScrollToTop from 'react-scroll-up'
 import { FiChevronUp } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
-import Header from '../header/InnerHeader'
-import Footer from '../footer/Footer'
-import Particles from '../particles/Particles'
-import Helmet from '../common/Helmet'
+import WrappedHeader from '../../wrapped-components/header'
+import Footer from '../../components/footer/Footer'
+import Particles from '../../components/particles'
+import Helmet from '../../components/common/Helmet'
 
 // here you can set your url to get the data from your api
 const fetchUrl = 'https://jsonplaceholder.typicode.com/posts'
@@ -34,7 +34,7 @@ const Blog = () => {
 
   return (
     <>
-      <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
+      <WrappedHeader headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
       <Helmet pageTitle="Articles" />
       <div className="active-dark">
 

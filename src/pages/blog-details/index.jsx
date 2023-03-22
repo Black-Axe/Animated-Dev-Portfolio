@@ -8,10 +8,10 @@ import ScrollToTop from 'react-scroll-up'
 import { useNavigate, useLocation, useParams } from 'react-router-dom'
 
 import { sanitize } from 'isomorphic-dompurify'
-import Header from '../header/InnerHeader'
-import Footer from '../footer/Footer'
-import Particles from '../particles/Particles'
-import Helmet from '../common/Helmet'
+import WrappedHeader from '../../wrapped-components/header'
+import Footer from '../../components/footer/Footer'
+import Particles from '../../components/particles'
+import Helmet from '../../components/common/Helmet'
 
 const BlogDetails = ({ match, data }) => {
   const { blogSlug } = useParams()
@@ -74,7 +74,7 @@ const BlogDetails = ({ match, data }) => {
   return (
 
     <>
-      <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
+      <WrappedHeader headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
 
       <Helmet pageTitle={pageTitle || ' Article'} />
 

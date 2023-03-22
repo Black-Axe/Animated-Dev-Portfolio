@@ -1,9 +1,9 @@
 import React from 'react'
 import config from './config'
 import myAvatar from './avatar.png'
-import HomeTabs from '../tabs/Tabs'
+import HomeTabs from './tabs'
 
-export default function About() {
+const About = () => {
   const { title } = config
   const { description } = config
   const { subtitle } = config
@@ -47,3 +47,5 @@ export default function About() {
 
   )
 }
+
+export default About

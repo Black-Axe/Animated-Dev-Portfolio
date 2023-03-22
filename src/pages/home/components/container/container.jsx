@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import Helmet from '../../components/common/Helmet'
-import Particles from '../../components/particles/Particles'
+import Helmet from '../../../../components/common/Helmet'
+import Particles from '../../../../components/particles'
 
 const HomeContainer = (props) => {
   const { children } = props

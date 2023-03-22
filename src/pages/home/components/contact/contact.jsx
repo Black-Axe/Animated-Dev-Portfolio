@@ -9,7 +9,7 @@ import * as yup from 'yup'
 import axios from 'axios'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 import { css } from '@emotion/react'
-import logo from '../../assets/img/blackaxelogo.png'
+import logo from '../../../../assets/img/blackaxelogo.png'
 
 const schema = yup.object().shape({
   name: yup.string().required('Name is required'),
